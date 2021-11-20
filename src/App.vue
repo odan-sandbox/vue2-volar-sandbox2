@@ -1,18 +1,24 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <HelloWorld :msg="10" />
+    <VButton />
   </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { defineComponent } from "@vue/composition-api";
 import HelloWorld from "./components/HelloWorld.vue";
+import VButton from "./components/VButton.vue";
 
-export default Vue.extend({
+type A = typeof VButton;
+type B = A["props"];
+
+export default defineComponent({
   name: "App",
   components: {
     HelloWorld,
+    VButton,
   },
 });
 </script>
