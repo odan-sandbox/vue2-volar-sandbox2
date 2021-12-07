@@ -11,9 +11,6 @@ import { defineComponent } from "@vue/composition-api";
 import HelloWorld from "./components/HelloWorld.vue";
 import VButton from "./components/VButton.vue";
 
-type A = typeof VButton;
-type B = A["props"];
-
 export default defineComponent({
   name: "App",
   components: {
